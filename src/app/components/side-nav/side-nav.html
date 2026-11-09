@@ -1,0 +1,22 @@
+<div class="container">
+
+    <div class="header">
+        <ul>
+            <li>
+                <mat-icon>calendar_today</mat-icon>
+                <h2>Zalendar</h2>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="menu">
+        <ul>
+            @for(title of titles; track title) {
+                <li [routerLink]="title.route">
+                    <mat-icon>{{ title.icon }}</mat-icon>
+                    <p>{{ title.title }}</p>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
